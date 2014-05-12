@@ -2,10 +2,10 @@
 <div class="carousel" id="myCarousel">
     <div class="carousel-inner">
     {% for latestpromo in latestpromos %}
-        {% for slide in latestpromo %}
+        {% for promo in latestpromo %}
         <div class="item">
-            {% if slide.link %}<a href="{{slide.link}}">{% endif %}
-            <img src="{{slide.image}}" alt="{{slide.description}}" />
+            {% if promo.link %}<a href="{{promo.link}}">{% endif %}
+            <img src="{{promo.image}}" alt="{{promo.title}}" />
             {% if slide.link %}</a>{% endif %}
         </div>
         {% endfor %}
