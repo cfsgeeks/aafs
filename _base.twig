@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="{{ htmllang() }}"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="{{ htmllang() }}"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="{{ htmllang() }}"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="{{ htmllang() }}"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    {# make sure we always display a proper title: The record's title if there is one, appended with the
+       sitename. If there is no title, we append the sitename with the payoff, if there is one. #}
+    <title>
+      {% if record.title is defined %}{{ record.title|striptags }} | {% endif %}
+      {{ app.config.get('general/sitename') }}
+      {% if record.title is not defined and app.config.get('general/payoff') %} | {{ app.config.get('general/payoff') }}{% endif %}
+    </title>
+    {# paths.theme is always a correct path to the current theme. Even if you rename the theme-folder,
+       this will keep working. See the documentation on paths: http://docs.bolt.cm/internals#paths #}
+       {% include '_styles.twig' %}
+       <link rel="shortcut icon" href='{{paths.theme}}images/favicon.ico'>
+
+    {#<!-- A variable from the theme's config: {{ theme.foo }} -->#}
+
+</head>
+<body>
+{% include '_header.twig' %}
+    {% if request.path == "/" %}
+    {% include '_slideshow.twig' %}
+    {% endif %}
+    <div class="container">
+        <div class="row">
+            {% if paths.current == '/' %}
+        <div class="span12">
+        {% else %}
+            <div class="span3 left">
+            {% block left_panel %}
+                <div class="panel tree">{{ menu('tree','_menu_tree.twig') }}</div>
+            {% endblock %}
+            </div>
+            <div class="span9 middle" role="main">
+            <h2 class="page-header">{{ page.title }}</h2>
+        {% endif %}
+        {% block main %}{% endblock %}
+        </div>
+    </div>
+    {% include '_sitefooter.twig' %}
+    {% include '_scripts.twig' %}
+</body>
+</html>

@@ -1,94 +1,65 @@
-{% include '_header.twig' %}
+{% extends "_base.twig" %}
+{% block main %}
+<div class="container" id="content">
+        <div class="row">
+            <div class="span4">
+                <div>
+                    <h4 class="vig">Rights of the Aboriginal Child</h4>
+                    <img src="{{paths.theme}}images/pow-wow-2.jpg" alt="" class="img-polaroid">
+                    <div class="shim-top">
+<p>Under the Great Law of the Anishinabeg, an Anishinaabe child has aboriginal (ascribed) rights.</p>
 
-<!-- Main Page Content and Sidebar -->
-<div class="row">
+<p>These are their Rights:</p>
 
-    <!-- Main Blog Content -->
-    <div class="eight columns" role="content">
+<ul class="unstyled text-small">
+<li>To their Name &mdash;  Anishinabe ishinikasoowin</li>
+<li>To their Clan &mdash; dodem</li>
+<li>To be with the Family &mdash; gutsiimug</li>
+<li>To cultural and ceremonial practices &mdash; Anishinabe miiniggisiwin</li>
+<li>To their identity &mdash; anishinabewin</li>
+<li>To their language &mdash; anishinabemoowin</li>
+<li>To a purposeful and zestful life &mdash; mino bimatiziwin</li>
+<li>To their ancestral land &mdash; anishinabe akiing</li>
+<li>To the lifestyle of the anishinabe &mdash; anishinabechigewin</li>
+<li>To a good education &mdash; kinamaatiwin</li>
+<li>To protection within the family &mdash; shanawentasoowin</li>
+<li>To protection outside the family &mdash; ganawentasoowin</li>
+</ul>
 
-        <article>
-            {% if record is defined %}
-
-                {# make the 'home' variable refer to the current record, which is set by the
-                   user in config.yml #}
-                {% set home = record %}
-                {% if home.title is defined and home.title is not empty %}
-                    <h1>{{ home.title }}</h1>
-                {% endif %}
-
-                {% if home.image is defined and home.image is not empty %}
-                    <div class="five columns imageholder">
-                        <a href="{{ image(home.image) }}">
-                            <img src="{{ thumbnail(home.image, 400, 260) }}">
-                        </a>
+                </div>
+                </div>
+            </div>
+            <div class="span8">
+                <div class="row">
+                    <div class="span4">
+                <div>
+                    <h4 class="vig">Caregiving</h4>
+                    <img src="{{paths.theme}}images/pow-wow-3.jpg" alt="" class="img-polaroid">
+                    <ul class="unstyled">
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="span4">
+                <div>
+                    <h4 class="vig">Customary Care</h4>
+                    <img src="{{paths.theme}}images/cultural-camp.jpg" alt="" class="img-polaroid">
+                    <div class="shim-top"></div>
+                    <p>Children hold a special place in Anishinaabe cultures.  According to tradition, they are gifts from the spirit world and have to be treated very gently lest they become disillusioned with this world and return to a more congenial place.  They must be protected from harm because there are Spirits that would wish to entice them back to that other realm.  They bring a purity of vision to the world that can teach their Elders.  They carry within them the gifts that manifest themselves, as they become Teachers, mothers, hunters, councilors, artisans and visionaries.  They renew the strength of the family, Clan and village and make the Elders young again with their joyful presence.</p>
+                    <cite>Anishnabek Traditional Teaching</cite>
+                </div>
+            </div>
+                </div>
+                <div class="row">
+                    <div class="span8">
+                        <h4 class="vig">Employment Opportunities</h4>
                     </div>
-                {% endif %}
-
-                {# display something introduction-like.. #}
-                {% if home.introduction is defined and home.introduction is not empty %}
-                    {{ home.introduction }}
-                {% elseif home.teaser is defined and home.teaser is not empty %}
-                    {{ home.teaser }}
-                {% elseif home is not empty %}
-                    <p>{{ home.excerpt(500) }}</p>
-                {% endif %}
-
-                {% if home.link is defined and home.link is not empty %}
-                    <a href="{{ home.link }}">Read more &raquo;</a>
-                {% endif %}
-
-                {# Tip: If you're curious what all of the available fields of this
-                   record contain, just use {{ print(home) }}, to print it all. #}
-
-            {% else %}
-                <p>{{ __('Content for home not found!') }}</p>
-            {% endif %}
-        </article>
-
-        <hr>
-
-        <h4>{{ __('Latest entries') }}</h4>
-
-        {# Here we use 'setcontent' to set the variable 'records' to "entries/latest/6",
-           which is shorthand for "the 6 latest records in Entries. Note that we are
-           requesting multiple entries, so 'records' will be an array containing each
-           of the entries. That's why we use the 'for' loop to iterate over them all. #}
-        {% setcontent records = "entries/latest/6" allowpaging %}
-        {% for record in records %}
-            <article>
-
-                {% if record.image!="" %}
-                    <div class="three columns imageholder">
-                        <a href="{{ image(record.image) }}">
-                            <img src="{{ thumbnail(record.image, 400, 260) }}">
-                        </a>
-                    </div>
-                {% endif %}
-
-                <h3><a href="{{ record.link }}">{{ record.title }}</a></h3>
-
-                <p>{{ record.excerpt(220) }}</p>
-
-            </article>
-
-            <hr>
-
-        {% endfor %}
-
-        {{ pager() }}
-
-
+                </div>
+            </div>
+        </div>
     </div>
-
-    <!-- End Main Content -->
-    {# include the sidebar. The include tag can be used to break up your templates in logical parts,
-       and re-use them across different templates/pages. #}
-    {% include '_aside.twig' %}
-
-</div>
-
-<!-- End Main Content and Sidebar -->
-
-
-
-{% include '_footer.twig' %}
+{% endblock %}
