@@ -1,0 +1,13 @@
+{% setcontent latestpromos = 'promos/latest/5' %}
+<div class="carousel" id="myCarousel">
+    <div class="carousel-inner">
+    {% for latestpromo in latestpromos %}
+        <div class="item">
+            {% if latestpromo.link %}<a href="{{latestpromo.link}}">{% endif %}
+            <img src="{{latestpromo.image}}" alt="{{latestpromo.description}}" />
+            {% if latestpromo.link %}</a>{% endif %}
+        </div>
+    {% endfor %}
+    </div>
+    <a href="#myCarousel" class="carousel-control left" data-slide="prev">&lt;</a><a href="#myCarousel" class="carousel-control right" data-slide="next">&gt;</a>
+</div>
