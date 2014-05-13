@@ -5,7 +5,7 @@
         {% for slide in latestpromo.image %}
         <div class="item">
             {% if slide.link %}<a href="{{slide.link}}">{% endif %}
-            <img src="files/{{slide.filename}}" alt="{{slide.description}}" />
+            <img src="{{paths.files}}{{slide.filename}}" alt="{{slide.description}}" />
             {% if slide.link %}</a>{% endif %}
         </div>
         {% endfor %}
