@@ -1,14 +1,12 @@
-{% setcontent latestpromos = 'promos/first/1' %}
+{% setcontent latestpromos = 'promos/latest/5' %}
 <div class="carousel" id="myCarousel">
     <div class="carousel-inner">
-    {% for latestpromo in latestpromos %}
-        {% for slide in latestpromo.image %}
+    {% for promo in latestpromos %}
         <div class="item{% if loop.first %} active{% endif %}">
-            {% if slide.link %}<a href="{{slide.link}}">{% endif %}
-            <img src="{{paths.files}}{{slide.filename}}" alt="{{slide.title}}" />
-            {% if slide.link %}</a>{% endif %}
+            {% if promo.linkto %}<a href="{{promo.linkto}}">{% endif %}
+            <img src="{{paths.files}}{{promo.filename}}" alt="{{promo.description}}" />
+            {% if promo.linkto %}</a>{% endif %}
         </div>
-        {% endfor %}
     {% endfor %}
     </div>
     <a href="#myCarousel" class="carousel-control left" data-slide="prev">&lt;</a><a href="#myCarousel" class="carousel-control right" data-slide="next">&gt;</a>
