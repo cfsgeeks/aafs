@@ -3,7 +3,7 @@
     <div class="carousel-inner">
     {% for latestpromo in latestpromos %}
         {% for slide in latestpromo.image %}
-        <div class="item{% if loop.first %} active{% endif %}">
+        <div class="item{% if loop.first %} blah{% endif %}">
             {% if slide.link %}<a href="{{slide.link}}">{% endif %}
             <img src="{{paths.files}}{{slide.filename}}" alt="{{slide.title}}" />
             {% if slide.link %}</a>{% endif %}
