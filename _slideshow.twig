@@ -3,9 +3,9 @@
     <div class="carousel-inner">
     {% for promo in latestpromos %}
         <div class="item{% if loop.first %} active{% endif %}">
-            {% if promo.linkto %}<a href="{{promo.linkto}}">{% endif %}
-            <img src="{{paths.files}}{{promo.image}}" alt="{{promo.description}}" />
-            {% if promo.linkto %}</a>{% endif %}
+            <h2>{{promo.title}}</h2>
+            <p>{{promo.description}}</p>
+            <button>{{promo.page}}</button>
         </div>
     {% endfor %}
     </div>
