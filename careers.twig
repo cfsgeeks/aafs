@@ -16,7 +16,7 @@
             <td><a href="/career/{{record.slug}}">{{record.title}}</td>
             <td>{{record.location}}</td>
             <td>{{record.term}}</td>
-            <td></td>
+            <td>{% if !record.unpublishdate %}Open{% endif %} </td>
         </tr>
         {% endfor %}
     </tbody>
