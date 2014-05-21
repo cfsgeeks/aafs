@@ -1,4 +1,22 @@
 {% block contenttitle %}Current Job Openings{% endblock %}
 {% extends "_base.twig" %}
 {% block main %}
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Location</th>
+            <th>Term</th>
+            <th>Closing Date</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>{{records.title}}</td>
+            <td>{{records.location}}</td>
+            <td>{{records.term}}</td>
+            <td></td>
+        </tr>
+    </tbody>
+</table>
 {% endblock %}
