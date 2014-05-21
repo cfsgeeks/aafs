@@ -1,0 +1,9 @@
+{% setcontent offices = 'locations/first/2' %}
+{% for office in offices %}
+<address>
+<strong>{% if office.alternate_name != '' %}{{office.alternate_name}}{% else %}{{office.english_name}}{% endif %}</strong><br />
+{{office.address}}<br />
+{{office.city}}, Ontario {{office.postal_code}}<br />
+{{office.phone_number}}
+</address>
+{% endfor %}

@@ -3,16 +3,8 @@
 		<div class="container">
 			<div class="row">
 			<div class="span3">
-				<div id="mini-map">
-					<img src="{{paths.theme}}images/minimap.png" alt="">
-				</div>
-				<address>
-					<strong>Anishinaabe Abinoojii Family Services</strong><br>
-					20 Main Street South<br>
-					Kenora, Ontario<br>
-					P9N 1S7
-				</address>
-			</div>
+			{% include "_locations.twig" %}
+            </div>
 			<div class="span9">
 				<div class="row">
 					{{ menu('footer','_menu_footer.twig') }}

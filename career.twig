@@ -1,0 +1,18 @@
+{% extends "_base.twig" %}
+{%block contenttitle%}Job Posting{% endblock %}
+{% block main %}
+<div itemscope itemtype="http://schema.org/JobPosting">
+<h2 itemprop="title">{{record.title}}</h2>
+<h4 itemprop="jobLocation">{{record.location}} &mdash; <small>{{record.term}} {% if record.term == "Full-Time Contract" or record.term == "Part-Time Contract" %}({{record.term_length}} months){% endif %}</small></h4>
+<h5>Description</h5>
+<p>{{record.description}}</p>
+<h5>Duties and Responsibilities</h5>
+<p>{{record.duties}}</p>
+<h5>Reports To</h5>
+<p>{{record.reports_to}}</p>
+<h5>Qualifications</h5>
+<p>{{record.qualifications}}</p>
+<h5>Additional Requirements</h5>
+<p>{{record.requirements}}</p>
+</div>
+{% endblock %}
