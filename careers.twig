@@ -16,7 +16,7 @@
             <td><a href="/career/{{record.slug}}">{{record.title}}</td>
             <td>{{record.location}}</td>
             <td>{{record.term}}</td>
-            <td>{% if record.datedepublish != "1900-01-01 00:00:01" %}{{record.datedepublish|date("M d, Y")}}{% else %}Open{% endif %}</td>
+            <td>{% if record.datedepublish != "1900-01-01 00:00:00" %}{{record.datedepublish|date("M d, Y")}}{% else %}Open{% endif %}</td>
         </tr>
         {% endfor %}
     </tbody>
