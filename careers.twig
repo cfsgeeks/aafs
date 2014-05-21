@@ -11,12 +11,14 @@
         </tr>
     </thead>
     <tbody>
+        {% for record in records %}
         <tr>
-            <td>{{records.title}}</td>
-            <td>{{records.location}}</td>
-            <td>{{records.term}}</td>
+            <td>{{record.title}}</td>
+            <td>{{record.location}}</td>
+            <td>{{record.term}}</td>
             <td></td>
         </tr>
+        {% endfor %}
     </tbody>
 </table>
 {% endblock %}
