@@ -1,4 +1,4 @@
-{% setcontent aboutlinks = 'pages' where {section: 'about'} %}
+{% setcontent aboutlinks = 'pages' where {sections: 'about'} %}
 <div class="span3">
 <ul class="unstyled">
     {% for link in aboutlinks %}
@@ -8,7 +8,7 @@
 </ul>
 </div>
 
-{% setcontent programlinks = 'pages' where {section: 'programs'} %}
+{% setcontent programlinks = 'pages' where {sections: 'programs'} %}
 <div class="span3">
 <ul class="unstyled">
     {% for link in links %}
