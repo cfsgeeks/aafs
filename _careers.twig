@@ -1,0 +1,9 @@
+{% setcontent careeritems = '/careers/latest/5' %}
+<ul class="unstyled">
+    {% for item in careeritems %}
+    <li>
+        <a href="/careers/{{item.slug}}">{{item.title}}</a>
+        <p>{{item.description}}</p>
+    </li>
+    {% endfor %}
+</ul>
