@@ -2,6 +2,7 @@
     <li class="dropdown">
         <ul class="dropdown-menu">
             {% setcontent aboutlinks = 'pages' where {section:"about"} %}
+            <a href="#">About Us</a>
             {% for link in aboutlinks %}
             <li><a href="/{{link.slug}}">{{link.title}}</a></li>
             {% endfor %}
