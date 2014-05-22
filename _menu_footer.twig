@@ -1,6 +1,8 @@
 {% setcontent links = 'pages' where {section: 'programs'} %}
+<div class="span3">
 <ul>
     {% for link in links %}
     <li><a href="/{{link.slug}}">{{link.title}}</a></li>
     {% endfor %}
 </ul>
+</div>
