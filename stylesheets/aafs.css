@@ -71,11 +71,11 @@ nav>ul>li {
     font-size: 1.3em;
     text-shadow: 0px 0px 1px #444;
     display:table-cell;
+    text-align:center;
 }
 
 #nav_main ul>li>a {
     color:black;
-    text-align: left;
 }
 
 #nav_main {
