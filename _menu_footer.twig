@@ -1,5 +1,6 @@
 {% setcontent aboutlinks = 'pages' where {sections: 'about'} %}
 <div class="span3">
+<h4>About Us</h4>
 <ul class="unstyled">
     {% for link in aboutlinks %}
     <li><a href="/{{link.slug}}">{{link.title}}</a></li>
@@ -9,6 +10,7 @@
 
 {% setcontent programlinks = 'pages' where {sections: 'programs'} %}
 <div class="span3">
+<h4>Programs &amp; Services</h4>
 <ul class="unstyled">
     {% for link in programlinks %}
     <li><a href="/{{link.slug}}">{{link.title}}</a></li>
