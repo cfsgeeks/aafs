@@ -1,0 +1,6 @@
+{% setcontent pagelist = 'pages' %}
+<ul class="unstyled">
+    {% for pageitem in pagelist %}
+        <li><a href="/{{pageitem.slug}}" {% if paths.current == '/{{pageitem.slug}}' %}class="active"{% endif %}>{{pageitem.title}}</a></li>
+    {% endfor %}
+</ul>

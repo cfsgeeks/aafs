@@ -34,7 +34,7 @@
         {% else %}
             <div class="span3 left">
             {% block left_panel %}
-                <div class="panel tree">{{ menu('tree','_menu_tree.twig') }}</div>
+                <div class="panel tree">{% include '_menu_tree.twig' %}</div>
             {% endblock %}
             </div>
             <div class="span9 middle" role="main">
