@@ -1,32 +1,25 @@
-<div class="container" role="banner" id="masthead">
-        <div class="row">
-            <div class="span6">
-                <a href="{{paths.root}}">
-                    {% include '_logo.twig' %}
-                    <h1 class="hide-text">Anishinaabe Abinoojii Family Services</h1>
-                    <!-- /.hide-text -->
-                </a>
-            </div>
-            <!-- /.span6 -->
-            <div class="span6">
-                <div class="row">
-                    <div class="span6">
-                        <nav role="navigation" id="nav_main">
-                    <ul>
-                        {{ menu('topnav','_menu_topnav.twig') }}
-                    </ul>
-                </nav>
+        <div class="container" role="banner" id="masthead">
+            <div class="row">
+                <div class="span6">
+                    <a href="{{paths.root}}">{% include '_logo.twig' %}</a>
+                    <h1 class="hide-text">
+                        <a href="{{paths.root}}">Anishinaabe Abinoojii Family Services</a>
+                    </h1><!-- /.hide-text -->
+                </div><!-- /.span6 -->
+                <div class="span6">
+                    <div class="row">
+                        {% include '_report-it.twig' %}
                     </div>
-
-                </div>
-                <div class="row">
-                    <div class="span6">
-                       {% include '_report-it.twig' %}
+                    <div class="row">
+                        <div class="span6">
+                            <nav role="navigation" id="nav_main">
+                                <ul>
+                                    <li style="list-style: none">{{ menu('topnav','_menu_topnav.twig') }}
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
                     </div>
-                </div>
-            </div>
-            <!-- /.span6 -->
-        </div>
-        <!-- /.row -->
-    </div>
-    <!-- /#masthead.container -->
+                </div><!-- /.span6 -->
+            </div><!-- /.row -->
+        </div><!-- /#masthead.container -->
