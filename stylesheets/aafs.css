@@ -167,3 +167,8 @@ li.active a {
 .tree li {
     line-height:24px;
 }
+
+.contact-notice {
+    display:block;
+    font-size:1.5em;
+}
