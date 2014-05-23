@@ -21,6 +21,7 @@
 .meta {
     font-size: 0.8em;
     padding-top:25px;
+    text-align:right;
 }
 
 .textnav {
@@ -175,4 +176,8 @@ li.active a {
     font-size:1.5em;
     letter-spacing:1.618px;
     font-weight:bold;
+}
+
+.colophon {
+    text-align:center;
 }
