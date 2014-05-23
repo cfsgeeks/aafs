@@ -171,6 +171,8 @@ li.active a {
 }
 
 .help {
-    color:#bf382c;
-    font-size:1.2em;
+    color:#ff6600;
+    font-size:1.5em;
+    letter-spacing:1.618px;
+    font-weight:bold;
 }
