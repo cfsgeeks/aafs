@@ -1,5 +1,5 @@
     <li class="dropdown">
-        <a href="" class="dropdown-toggle" data-target="#" data-toggle="dropdown">About Us</a>
+        <a href="" class="dropdown-toggle" data-target="#" data-toggle="dropdown">Who We Are</a>
         <ul class="dropdown-menu">
             {% setcontent aboutlinks = 'pages' where {sections: 'about'} %}
             {% for link in aboutlinks %}
@@ -8,7 +8,7 @@
         </ul>
     </li>
     <li class="dropdown">
-        <a href="" class="dropdown-toggle" data-target="#" data-toggle="dropdown">Programs &amp; Services</a>
+        <a href="" class="dropdown-toggle" data-target="#" data-toggle="dropdown">What We Do</a>
         <ul class="dropdown-menu">
             {% setcontent programlinks = 'pages' where {sections: 'programs'} %}
             {% for link in programlinks %}
@@ -16,5 +16,5 @@
             {% endfor %}
         </ul>
     </li>
-    <li class="dropdown"><a href="/careers">Work With Us</a></li>
-    <li class="dropdown"><a href="/contact">Contact Us</a></li>
+    <li class="dropdown"><a href="/careers">Join Our Team</a></li>
+    <li class="dropdown"><a href="/contact">Get In Touch</a></li>

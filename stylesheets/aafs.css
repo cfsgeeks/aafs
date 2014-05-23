@@ -59,6 +59,7 @@ nav>ul {
     display: table;
     margin: 65px 0px 5px;
     width: 100%;
+    table-layout: fixed;
 }
 
 nav>ul>li {
@@ -67,12 +68,9 @@ nav>ul>li {
     -moz-text-shadow:0px 0px 1px #444;
     -o-text-shadow:0px 0px 1px #444;
     -ms-text-shadow:0px 0px 1px #444;
-    font-size: 1.5em;*/
+    font-size: 1.5em;
     text-shadow: 0px 0px 1px #444;
-    padding-top:40px;
     display:table-cell;
-    width:25%;
-    text-align:center;
 }
 
 #nav_main ul>li>a {
@@ -164,7 +162,6 @@ li.active a {
     padding: 20px;
     border:1px solid #f2f2f2;
     display:table;
-    vertical-align: top;
 }
 
 .tree li {
