@@ -181,3 +181,7 @@ li.active a {
 .colophon {
     text-align:center;
 }
+
+.ff_fix {
+    position:relative;
+}
