@@ -24,13 +24,13 @@
 </head>
 <body>
 {% include '_header.twig' %}
-    {% if paths.current == '/'%}
-    {% include '_slideshow.twig' %}
-    {% endif %}
     <div class="container">
         <div class="row">
         {% if paths.current == '/' %}
         <div class="span12">
+        {% if paths.current == '/'%}
+    {% include '_slideshow.twig' %}
+    {% endif %}
         {% else %}
             <div class="span3 left">
             {% block left_panel %}
