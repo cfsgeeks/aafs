@@ -42,6 +42,7 @@
         {% endif %}
         {% block main %}{% endblock %}
         {{paths.current}}
+        {{'/'+page.slug}}
         </div>
     </div>
     {% include '_sitefooter.twig' %}
