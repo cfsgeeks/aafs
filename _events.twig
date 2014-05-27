@@ -2,7 +2,7 @@
 <ul class="unstyled">
     {% for event in current_events %}
         <h4>{{event.title}}</h5>
-        <h5>{{event.event_start|date('F j, y')}}{% if event.event_end and event.event_end != event.event_start %}&mdash;{{event.event_end|date('F j, y')}}{% endif %}</h5>
+        <h5>{{event.event_start|date('l F j, Y')}}{% if event.event_end and event.event_end != event.event_start %}&mdash;{{event.event_end|date('l F j, Y')}}{% endif %}</h5>
         <h6>{{event.location}}</h6>
         <p>{{event.details}}</p>
         <a href="{{event.link()}}">More Details</a>
