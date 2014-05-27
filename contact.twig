@@ -1,26 +1,35 @@
 {% extends "_base.twig" %}
 {% block main %}
 {% setcontent offices = 'locations' %}
+<div class="span9">
+    <div class="contact-help-notice">
+        <p>Need Help?</p>
+        <p class="toll-free">888-420-9990</p>
+        <p>24 Hours</p></div>
+</div>
 {% for office in offices %}
     <div class="row">
         <div class="office">
-            <div class="span9"><h4 class="vig">{{office.english_name}}</h4></div>
+            <div class="span9"><h4 class="vig">{{office.english_name}}</small></h4></div>
             <div class="span3">
-                <div class="map"></div>
+                <div class="map">{{office.map_location}}</div>
             </div>
             <div class="span3">
                 <div class="address">
-                    <p class="street"></p>
-                    <p class="mailing"></p>
-                    <p class="city"></p>
-                    <p class="postal"></p>
+                    <p class="street">{{office.address}}</p>
+                    <p class="mailing">{{office.address2}}</p>
+                    <p class="city">{{office.city}}</p>
+                    <p class="postal">{{office.postal_code}}</p>
                 </div>
             </div>
             <div class="span3">
                 <div class="contacts">
-                    <p class="phone"></p>
-                    <p class="fax"></p>
-                    <p class="email"></p>
+                    <p class="phone">{{office.phone_number}}</p>
+                    <p class="fax">{{office.fax_number}}</p>
+                    <p class="email">{{office.email}}</p>
+                </div>
+                <div class="hours">
+                    <p>{{office.hours}}</p>
                 </div>
             </div>
         </div>
