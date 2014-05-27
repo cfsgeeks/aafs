@@ -3,12 +3,12 @@
 <ul class="unstyled">
     <h3 class="vig">Our Programs &amp; Services</h3>
     {% for pageitem in programslist %}
-        <li {% if pageitem|current %}class="active"{% endif %}><a href="{{pageitem|link}}">{{pageitem.title}}</a></li>
+        <li {% if pageitem|current %}class="active"{% endif %}><a href="{{pageitem.link()}}">{{pageitem.title}}</a></li>
     {% endfor %}
 </ul>
 <ul class="unstyled">
     <h3 class="vig">About Us</h3>
     {% for pageitem in aboutlist %}
-        <li {% if pageitem|current %}class="active"{% endif %}><a href="{{pageitem|link}}">{{pageitem.title}}</a></li>
+        <li {% if pageitem|current %}class="active"{% endif %}><a href="{{pageitem.link()}}">{{pageitem.title}}</a></li>
     {% endfor %}
 </ul>
