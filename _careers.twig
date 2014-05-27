@@ -2,7 +2,8 @@
 <ul class="unstyled">
     {% for item in careeritems %}
     <li>
-        <a href="/careers/{{item.slug}}">{{item.title}}</a>
+        <a href="{{item.link()}}">{{item.title}}</a>
+        <small>{{item.location}}</small>
         <p>{{item.description}}</p>
     </li>
     {% endfor %}
