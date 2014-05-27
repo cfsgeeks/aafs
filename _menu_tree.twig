@@ -1,14 +1,15 @@
 {% setcontent programslist = 'pages' where {sections: 'programs'} %}
 {% setcontent aboutlist = 'pages' where {sections: 'about'} %}
+{% set current_path = paths.current %}
 <ul class="unstyled">
     <h3 class="vig">Our Programs &amp; Services</h3>
     {% for pageitem in programslist %}
-        <li {% if paths.current == '/' + pageitem.slug %}class="active"{% endif %}><a href="/{{pageitem.slug}}">{{pageitem.title}}</a></li>
+        <li {% if current_path == '/' + pageitem.slug %}class="active"{% endif %}><a href="/{{pageitem.slug}}">{{pageitem.title}}</a></li>
     {% endfor %}
 </ul>
 <ul class="unstyled">
     <h3 class="vig">About Us</h3>
     {% for pageitem in aboutlist %}
-        <li {% if paths.current == '/'+ pageitem.slug %}class="active"{% endif %}><a href="/{{pageitem.slug}}">{{pageitem.title}}</a></li>
+        <li {% if current_path == '/'+ pageitem.slug %}class="active"{% endif %}><a href="/{{pageitem.slug}}">{{pageitem.title}}</a></li>
     {% endfor %}
 </ul>
