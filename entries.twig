@@ -1,4 +1,5 @@
 {% extends "_base.twig" %}
+{% block contenttitle %}Latest Agency News{% endblock %}
 {% block main %}
 {% for record in records %}
     <h3><a href="{{record.link()}}">{{record.title}}</a></h3>
