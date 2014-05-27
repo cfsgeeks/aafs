@@ -188,3 +188,7 @@ li.active a {
 #nav_main ul>li>a:focus {
     text-decoration: none;
 }
+
+.bdr-right {
+    border-right:1px solid #f2f2f2;
+}
