@@ -162,10 +162,9 @@ li.active a {
 }
 
 .tree {
-    background-color:#fafafa;
     padding: 20px;
-    border:1px solid #f2f2f2;
     display:table;
+    border-right:1px solid #f2f2f2;
 }
 
 .tree li {
