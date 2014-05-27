@@ -1,3 +1,6 @@
+{% block contenttitle %}{% endblock %}
+{% extends "_base.twig" %}
+{% block main %}
 {% setcontent offices = 'locations' %}
 {% for office in offices %}
     <div class="row">
@@ -24,3 +27,4 @@
         </div>
     </div>
 {% endfor %}
+{% endblock %}
