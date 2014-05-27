@@ -1,0 +1,26 @@
+{% setcontent offices = 'locations' %}
+{% for office in offices %}
+    <div class="row">
+        <div class="office">
+            <h2>{{office.english_name}}</h2>
+            <div class="span3">
+                <div class="map"></div>
+            </div>
+            <div class="span3">
+                <div class="address">
+                    <p class="street"></p>
+                    <p class="mailing"></p>
+                    <p class="city"></p>
+                    <p class="postal"></p>
+                </div>
+            </div>
+            <div class="span3">
+                <div class="contacts">
+                    <p class="phone"></p>
+                    <p class="fax"></p>
+                    <p class="email"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endfor %}
