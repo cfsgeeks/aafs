@@ -1,4 +1,11 @@
 {% extends "_base.twig" %}
 {% block main %}
-{{record.body}}
+{% for record in records %}
+    <h3><a href="{{record.link()}}">{{record.title}}</a></h3>
+    {% if record.teaser %}
+        {{record.teaser}}
+    {% elseif record.introduction %}
+        {{record.introduction}}
+    {% endif %}
+{% endfor %}
 {% endblock %}
