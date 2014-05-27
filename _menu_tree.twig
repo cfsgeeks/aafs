@@ -13,3 +13,4 @@
         <li {% if current_path == '/'+ pageitem.slug %}class="active"{% endif %}><a href="/{{pageitem.slug}}">{{pageitem.title}}</a></li>
     {% endfor %}
 </ul>
+{{print(record)}}
