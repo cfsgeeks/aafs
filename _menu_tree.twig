@@ -4,13 +4,14 @@
 <ul class="unstyled">
     <h3 class="vig">Our Programs &amp; Services</h3>
     {% for pageitem in programslist %}
-        <li {% if current_path == '/' + pageitem.slug %}class="active"{% endif %}><a href="/{{pageitem.slug}}">{{pageitem.title}}</a></li>
+        {% set pagepath = '/'+pageitem.slug %}
+        <li {% if current_path == pagepath %}class="active"{% endif %}><a href="/{{pageitem.slug}}">{{pageitem.title}}</a></li>
     {% endfor %}
 </ul>
 <ul class="unstyled">
     <h3 class="vig">About Us</h3>
     {% for pageitem in aboutlist %}
-        <li {% if current_path == '/'+ pageitem.slug %}class="active"{% endif %}><a href="/{{pageitem.slug}}">{{pageitem.title}}</a></li>
+        {% set pagepath = '/'+pageitem.slug %}
+        <li {% if current_path == pagepath %}class="active"{% endif %}><a href="/{{pageitem.slug}}">{{pageitem.title}}</a></li>
     {% endfor %}
 </ul>
-{{print(record)}}
