@@ -1,4 +1,4 @@
-{% setcontent pagelist = 'pages' where {sections: 'programs','about'} %}
+{% setcontent pagelist = 'pages' where {sections: 'programs' || 'about'} %}
 <ul class="unstyled">
     {% for pageitem in pagelist %}
         <li {% if paths.current == '/{{pageitem.slug}}' %}class="active"{% endif %}><a href="/{{pageitem.slug}}">{{pageitem.title}}</a></li>
