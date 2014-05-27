@@ -41,8 +41,7 @@
                 <h2 class="page-header">{% block contenttitle%}{{ page.title }}{% endblock %}</h2>
         {% endif %}
         {% block main %}{% endblock %}
-        {{paths.current}}
-        {{page.slug}}
+        {{current_page}}
         </div>
     </div>
     {% include '_sitefooter.twig' %}
