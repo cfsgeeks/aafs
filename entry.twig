@@ -1,4 +1,7 @@
 {% extends "_base.twig" %}
 {% block main %}
+{% if record.image %}
+<img src="{{record.image}}" alt="" />
+{% endif %}
 {{record.body}}
 {% endblock %}

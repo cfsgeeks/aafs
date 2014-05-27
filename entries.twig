@@ -3,6 +3,7 @@
 {% block main %}
 {% for record in records %}
     <h3><a href="{{record.link()}}">{{record.title}}</a></h3>
+    <h4>{{record.datepublished|date('F j, Y')}}</h4>
     {% if record.teaser %}
         {{record.teaser}}
     {% elseif record.introduction %}
