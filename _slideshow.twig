@@ -4,7 +4,7 @@
     {% for promo in latestpromos %}
         {% setcontent related_pages = promo.related() %}
         {% for related in related_pages %}
-            <a href="{{related.link()}}">
+            <a href="{{related.link}}">
         {% endfor %}
             <div class="item{% if loop.first %} active{% endif %}">
                 {% if promo.image %}
