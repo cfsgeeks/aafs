@@ -2,8 +2,7 @@
 <div class="carousel" id="myCarousel">
     <div class="carousel-inner">
     {% for promo in latestpromos %}
-        {{print(promo.related)}}
-        {% setcontent related_pages = promo.related('pages') %}
+        {{print(promo.related())}}
         {% if related_pages is not empty %}
         {% for related in related_pages %}
             <a href="{{related.link}}">
