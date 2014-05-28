@@ -3,7 +3,7 @@
     {% for item in careeritems %}
     <li>
         <a href="{{item.link()}}">{{item.title}}</a>
-        <p>{{item.location}}</p>
+        <p><small>in {{item.location}}</small></p>
         <p>{{item.description}}</p>
     </li>
     {% endfor %}
