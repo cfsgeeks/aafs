@@ -3,9 +3,13 @@
     <div class="carousel-inner">
     {% for promo in latestpromos %}
         <div class="item{% if loop.first %} active{% endif %}">
+            {% if item.image %}
+            {{item.image|showimage}}
+            {% else %}
             <h2>{{promo.title}}</h2>
             <p>{{promo.description}}</p>
             <button>{{promo.page}}</button>
+            {% endif %}
         </div>
     {% endfor %}
     </div>
