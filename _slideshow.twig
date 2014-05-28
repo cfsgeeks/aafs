@@ -5,7 +5,8 @@
         {% setcontent related_pages = promo.related() %}
         {% if related_pages is not empty %}
         {% for related in related_pages %}
-            <a href="{{related.link}}">
+        {{print(related)}}
+            <a href="{{related.link()}}">
         {% endfor %}
         {% endif %}
             <div class="item{% if loop.first %} active{% endif %}">
