@@ -1,8 +1,9 @@
 {% extends "_base.twig" %}
 {% block main %}
+{{print(record)}}
 <h5>{{record.datepublished|date('F j, Y')}} <small>in {{record.categories}}</small></h5>
 {% if record.image %}
-<img src="{{record.image}}" alt="" />
+<img src="{{record.image|thumbnail(320,240)}}" alt="" />
 {% endif %}
 {{record.body}}
 {% endblock %}
