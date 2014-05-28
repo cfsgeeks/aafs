@@ -2,7 +2,7 @@
 <div class="carousel" id="myCarousel">
     <div class="carousel-inner">
     {% for promo in latestpromos %}
-        {% setcontent relatedpages = promo.related('pages') %}
+        {% setcontent relatedpages = promo.related() %}
         {{print(relatedpages)}}
             <div class="item{% if loop.first %} active{% endif %}">
                 {% if promo.image %}
