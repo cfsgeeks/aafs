@@ -33,11 +33,6 @@
     /*color: #4e7fbf;*/
     font-family: 'Open Sans Condensed';
     font-weight: 300;
-    -webkit-text-shadow: 0px 0px 1px #ccc;
-    -moz-text-shadow: 0px 0px 1px #ccc;
-    -o-text-shadow: 0px 0px 1px #ccc;
-    -ms-text-shadow: 0px 0px 1px #ccc;
-    text-shadow: 0px 0px 1px #ccc;
     font-size:1.618em;
     padding:12px 0;
 }
@@ -67,17 +62,12 @@ nav ul {
 
 nav>ul>li {
     font-family: 'Open Sans Condensed';
-    -webkit-text-shadow:0px 0px 1px #444;
-    -moz-text-shadow:0px 0px 1px #444;
-    -o-text-shadow:0px 0px 1px #444;
-    -ms-text-shadow:0px 0px 1px #444;
-    font-size: 1.618em;
-    text-shadow: 0px 0px 1px #444;
+    font-size: 1.4em;
     display:table-cell;
-    text-align:center;
+    text-align:right;
     vertical-align:middle;
     margin-top:30px;
-    line-height:28px;
+    line-height:22px;
 }
 
 #nav_main ul>li>a {
