@@ -2,7 +2,7 @@
 <div class="carousel" id="myCarousel">
     <div class="carousel-inner">
     {% for promo in latestpromos %}
-        {% set relations = promo.related())}}
+        {% set relations = promo.related() %}
         {% if relations is not empty %}
         {% for relation in relations %}
             <a href="{{relation.link()}}">{{relation.title}}</a>
