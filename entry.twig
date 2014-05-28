@@ -2,7 +2,7 @@
 {% block main %}
 <h5>{{record.datepublished|date('F j, Y')}} <small>in {% for cat in record.taxonomy.categories %}<span class="label">{{cat}}</span> {% endfor %}</small></h5>
 {% if record.image %}
-<img src="{{record.image|thumbnail(320,240)}}" alt="" />
+{{record.image|showimage(320,240)}}
 {% endif %}
 {{record.body}}
 {% endblock %}
