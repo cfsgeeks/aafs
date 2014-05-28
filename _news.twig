@@ -1,10 +1,12 @@
 {% setcontent news = 'entries/latest/5' %}
-<ul class="unstyled">
+<div class="carousel" id="carousel-news">
+<ul class="unstyled carousel-inner">
     {% for item in news %}
-        <li>
+        <li class="item">
             <h4><a href="{{item.link()}}">{{item.title}}</a></h4>
             <h5>{{item.publisheddate|date('F j, Y')}}</h5>
             {% if item.teaser %}{{item.teaser}}{% else %}item.excerpt(300){% endif %}
         </li>
     {% endfor %}
 </ul>
+</div>
