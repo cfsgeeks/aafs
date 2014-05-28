@@ -193,6 +193,6 @@ li.active a {
     border-right: 1px solid #f2f2f2;
 }
 
-.carousel li.active a {
-    color:none;
+#carousel-news ul li {
+    min-height:175px;
 }
