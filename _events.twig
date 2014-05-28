@@ -1,9 +1,9 @@
 {% setcontent current_events = 'events/latest/5'%}
 <ul class="unstyled">
     {% for event in current_events %}
-        <li><h4><a href="{{event.link()}}">{{event.title}}</a></h4>
-                <h5>{{event.event_start|date('l F j, Y')}}{% if event.event_end and event.event_end != event.event_start %}&mdash;{{event.event_end|date('l F j, Y')}}{% endif %}</h5>
-                <p>{{event.location}}</p>
+        <li><h5><a href="{{event.link()}}">{{event.title}}</a></h4>
+                <h6>{{event.event_start|date('l F j, Y')}}{% if event.event_end and event.event_end != event.event_start %}&mdash;{{event.event_end|date('l F j, Y')}}{% endif %}</h6>
+                <p><span class="label info">{{event.location}}</span></p>
                 <p>{{event.details}}</p></li>
     {% endfor %}
 </ul>
