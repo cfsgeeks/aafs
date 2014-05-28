@@ -193,6 +193,6 @@ li.active a {
     border-right: 1px solid #f2f2f2;
 }
 
-#carousel-news li.active>a {
+#carousel-news li.active a {
     color:#bf382c;
 }
