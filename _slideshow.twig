@@ -2,8 +2,8 @@
 <div class="carousel" id="myCarousel">
     <div class="carousel-inner">
     {% for promo in latestpromos %}
-        {% setcontent related_pages = promo.related() %}
-        {% for relatedpage in related_pages %}
+        {% setcontent relatedpages = promo.related() %}
+        {% for relatedpage in relatedpages %}
             {{print(relatedpage)}}
         {% endfor %}
             <div class="item{% if loop.first %} active{% endif %}">
