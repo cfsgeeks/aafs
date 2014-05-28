@@ -3,7 +3,7 @@
 <div class="carousel" id="myCarousel">
     <div class="carousel-inner">
     {% for promo in latestpromos %}
-        <a href="{{pages.link(promo.relation.pages[0])}}">
+        <a href="{{related.link()}}">
             <div class="item{% if loop.first %} active{% endif %}">
                 {% if promo.image %}
                 <img src="{{paths.files}}/{{promo.image}}" />
