@@ -4,7 +4,7 @@
     {% for promo in latestpromos %}
         <div class="item{% if loop.first %} active{% endif %}">
             {% if promo.image %}
-            {{promo.image|showimage}}
+            {{promo.image}}
             {% else %}
             <h2>{{promo.title}}</h2>
             <p>{{promo.description}}</p>
