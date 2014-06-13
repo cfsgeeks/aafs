@@ -18,7 +18,7 @@
                 <p>{{promo.description}}</p>
                 <button>{{promo.page}}</button>
                 {% endif %}
-                {% if relations is not empty %}
+                {% if relations is not empty or promo.weblink is not empty %}
                     </a>
                 {% endif %}
             </div>
