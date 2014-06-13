@@ -24,13 +24,20 @@
 </head>
 <body>
 {% include '_header.twig' %}
+    {% if paths.current == '/' %}
     <div class="container">
         <div class="row">
-        {% if paths.current == '/' %}
-        <div class="span12">
-        {% if paths.current == '/'%}
-    {% include '_slideshow.twig' %}
-    {% endif %}
+            <div class="span3">
+                <img src="{{paths.theme}}images/ragalia.jpg" alt="" />
+            </div>
+            <div class="span9">
+                {% include '_slideshow.twig' %}
+            </div>
+        </div>
+    </div>
+        <div class="container">
+            <div class="row">
+                <div class="span12">
         {% else %}
             <div class="span3 left">
             {% block left_panel %}
