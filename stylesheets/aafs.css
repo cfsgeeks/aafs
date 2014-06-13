@@ -199,3 +199,9 @@ li.active a {
 #frontpage {
     padding-top:20px;
 }
+
+.contact-help-notice {
+    display:block;
+    background:#ffeedd;
+    border: 1px solid #000;
+}

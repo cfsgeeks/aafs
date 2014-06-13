@@ -49,8 +49,10 @@
             <div class="span9 middle" role="main">
                 <h2 class="page-header">{% block contenttitle%}{{ record.title }}{% endblock %}</h2>
         {% endif %}
-        {% block main %}{% endblock %}
-        {{current_page}}
+        <div class="row">
+            {% block main %}{% endblock %}
+            {{current_page}}
+        </div>
         </div>
     </div>
     {% include '_sitefooter.twig' %}
