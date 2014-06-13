@@ -4,10 +4,12 @@
     {% for promo in latestpromos %}
             <div class="item{% if loop.first %} active{% endif %}">
                 {% set relations = promo.related() %}
-                {% if relations is not empty %}
+                {% if relations is not empty and promo.weblink is empty %}
                     {% for relation in relations %}
                         <a href="{{relation.link()}}">
                     {% endfor %}
+                {% else %}
+                        <a href="{{promo.weblink}}">
                 {% endif %}
                 {% if promo.image %}
                 <img src="{{paths.files}}/{{promo.image}}" />
