@@ -192,6 +192,10 @@ li.active a {
     margin:0 0 10px;
 }
 
+#myCarousel {
+    padding-top:30px;
+}
+
 #frontpage {
     padding-top:20px;
 }
