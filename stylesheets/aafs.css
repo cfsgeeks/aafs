@@ -191,3 +191,7 @@ li.active a {
 #carousel-news li>h4 {
     margin:0 0 10px;
 }
+
+#frontpage {
+    padding-top:20px;
+}
