@@ -4,7 +4,7 @@
     {% for item in news %}
         <li class="item{% if loop.first %} active {% endif %}">
             <h4><a href="{{item.link()}}">{{item.title}}</a></h4>
-            <h5>{{item.publisheddate|date('F j, Y')}}</h5>
+            <h5>{{item.datepublish|date('F j, Y')}}</h5>
             {{item.excerpt|nl2br}} <a href="{{item.link()}}">Read article</a>
         </li>
     {% endfor %}

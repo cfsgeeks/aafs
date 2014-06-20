@@ -1,6 +1,6 @@
 {% extends "_base.twig" %}
 {% block main %}
-<h5>{{record.datepublished|date('F j, Y')}} <small>in {% for cat in record.taxonomy.categories %}<span class="label">{{cat}}</span> {% endfor %}</small></h5>
+<h5>{{record.datepublish|date('F j, Y')}} <small>in {% for cat in record.taxonomy.categories %}<span class="label">{{cat}}</span> {% endfor %}</small></h5>
 {% if record.image %}
 {{record.image|showimage(320,240)}}
 {% endif %}
