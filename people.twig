@@ -4,10 +4,9 @@
 {% setcontent peoples = 'people' %}
 {% for person in peoples %}
 <div class="media">
-    <img src="http://placehold.it/270x270" alt="Picture of {{person.name}}" class="media-object">
+    <img src="http://placehold.it/180x180" alt="Picture of {{person.name}}" class="media-object">
     <div class="media-body">
-        <h4 class="media-heading">{{person.name}}</h4>
-        <h5>{{person.title}}</h5>
+        <h4 class="media-heading">{{person.name}} &mdash; <small>{{person.title}}</small></h4>
     </div>
 </div>
 {% endfor %}
