@@ -24,7 +24,8 @@
 <div class="media">
     <img src="http://placehold.it/96x96" alt="Picture of {{person.name}}" class="media-object pull-left">
     <div class="media-body">
-        <h5 class="media-heading">{{person.name}} &mdash; <small>{{person.title}}</small></h5>
+        <h5 class="media-heading">{{person.name}} {% if person.title %} &mdash; <small>{{person.title}}</small>{% endif %}</h5>
+        <h6>{{person.represents}}</h6>
         {{person.bio}}
     </div>
 </div>
