@@ -2,7 +2,7 @@
 {% block contenttitle %}Our People{% endblock %}
 {% block main %}
 {{record.body}}
-{% setcontent peoples = 'people' %}
+{% setcontent peoples = 'people' orderby '-id' %}
 {% for person in peoples %}
 <div class="media">
     <img src="http://placehold.it/96x96" alt="Picture of {{person.name}}" class="media-object pull-left">
