@@ -13,7 +13,7 @@
             <div class="span5">
                 <address>
                     <p class="street">{{office.address}}<br />
-                    <p class="mailing">{{office.address2}}<br />
+                    {% if office.mailing %}<p class="mailing">{{office.address2}}<br />{% endif %}
                     <p class="city">{{office.city}}<br />
                     <p class="postal">{{office.postal_code}}<br />
                 </address>
