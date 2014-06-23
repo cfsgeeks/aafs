@@ -2,7 +2,13 @@
 {% block contenttitle %}Our People{% endblock %}
 {% block main %}
 {% setcontent peoples = 'people' %}
-{% for people in peoples %}
-{{people.name}}
+{% for person in peoples %}
+<div class="media">
+    <img src="{{person.picture}}" alt="Picture of {{person.name}}" class="media-object">
+    <div class="media-body">
+        <h4 class="media-heading">{{person.name}}</h4>
+        <h5>{{person.title}}</h5>
+    </div>
+</div>
 {% endfor %}
 {% endblock %}
