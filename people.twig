@@ -8,7 +8,7 @@
 
 <h4>Our Directors</h4>
 <div class="people">
-{% for person in peoples %}
+{% for person in directors %}
 <div class="media">
     <img src="http://placehold.it/96x96" alt="Picture of {{person.name}}" class="media-object pull-left">
     <div class="media-body">
@@ -21,6 +21,19 @@
 <h4>Our Executive Committee</h4>
 <div class="people">
 {% for person in committee %}
+<div class="media">
+    <img src="http://placehold.it/96x96" alt="Picture of {{person.name}}" class="media-object pull-left">
+    <div class="media-body">
+        <h5 class="media-heading">{{person.name}} &mdash; <small>{{person.title}}</small></h5>
+        {{person.bio}}
+    </div>
+</div>
+{% endfor %}
+</div>
+
+<h4>Our Executive Staff</h4>
+<div class="people">
+{% for person in staff %}
 <div class="media">
     <img src="http://placehold.it/96x96" alt="Picture of {{person.name}}" class="media-object pull-left">
     <div class="media-body">
