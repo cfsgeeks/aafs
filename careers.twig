@@ -1,3 +1,4 @@
+{% setcontent jobs = 'careers'}
 {% block contenttitle %}Current Job Openings{% endblock %}
 {% extends "_base.twig" %}
 {% block main %}
@@ -11,12 +12,12 @@
         </tr>
     </thead>
     <tbody>
-        {% for record in records %}
+        {% for job in jobs %}
         <tr>
-            <td><a href="{{record.link()}}">{{record.title}}</td>
-            <td>{{record.location}}</td>
-            <td>{{record.term}}</td>
-            <td>{% if record.datedepublish != "1900-01-01 00:00:00" %}{{record.datedepublish|date("M d, Y")}}{% else %}Open{% endif %}</td>
+            <td><a href="{{job.link()}}">{{job.title}}</td>
+            <td>{{job.location}}</td>
+            <td>{{job.term}}</td>
+            <td>{% if job.datedepublish != "1900-01-01 00:00:00" %}{{job.datedepublish|date("M d, Y")}}{% else %}Open{% endif %}</td>
         </tr>
         {% endfor %}
     </tbody>
