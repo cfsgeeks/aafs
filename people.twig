@@ -3,7 +3,7 @@
 {% block main %}
 {{record.body}}
 {% setcontent peoples = 'people' where {is_committee: 'No'} orderby 'id' %}
-{% setcontent committee = 'people' where {is_committee: 'Yes' orderby 'id'} %}
+{% setcontent committee = 'people' where {is_committee: 'Yes'} orderby 'id' %}
 
 <div class="people">
 {% for person in peoples %}
