@@ -4,7 +4,7 @@
 {{record.body}}
 {% setcontent directors = 'people' where {is_director: 'Yes'} orderby 'id' %}
 {% setcontent committee = 'people' where {is_committee: 'Yes'} orderby 'id' %}
-{% setcontent staff = 'people' where {is_director: 'No' && is_committee: 'No'} orderby 'id' %}
+{% setcontent staff = 'people' where {is_director: 'No', is_committee: 'No'} orderby 'id' %}
 
 <h4>Our Directors</h4>
 <div class="people">
