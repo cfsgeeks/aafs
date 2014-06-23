@@ -1,2 +1,5 @@
-{% setcontent people = 'people' %}
-{{print(people)}}
+{% extends '_base.twig' %}
+{% block main %}
+{% setcontent peoples = 'people' %}
+{{print(peoples)}}
+{% endblock %}
