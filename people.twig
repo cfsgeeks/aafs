@@ -1,6 +1,7 @@
 {% extends '_base.twig' %}
 {% block contenttitle %}Our People{% endblock %}
 {% block main %}
+{{record.body}}
 {% setcontent peoples = 'people' %}
 {% for person in peoples %}
 <div class="media">
