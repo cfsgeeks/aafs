@@ -2,5 +2,7 @@
 {% block contenttitle %}Our People{% endblock %}
 {% block main %}
 {% setcontent peoples = 'people' %}
-{{peoples}}
+{% for people in peoples %}
+{{people.name}}
+{% endfor %}
 {% endblock %}
