@@ -1,4 +1,4 @@
-{% setcontent offices = 'locations' where {id:'=1 && =2'} %}
+{% setcontent offices = 'locations' where {id:'<=2'} orderby '-id' %}
 {% for office in offices %}
 <address>
 <strong>{% if office.alternate_name != '' %}{{office.alternate_name}}{% else %}{{office.english_name}}{% endif %}</strong><br />
