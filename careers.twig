@@ -1,7 +1,8 @@
-{% setcontent jobs = 'jobs' %}
-{% block contenttitle %}Current Job Openings{% endblock %}
+{% setcontent jobs = 'careers' %}
 {% extends "_base.twig" %}
 {% block main %}
+{{record.body}}
+<h3>Current Opportunities</h3>
 <table class="table">
     <thead>
         <tr>
