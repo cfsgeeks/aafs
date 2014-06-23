@@ -88,9 +88,9 @@ a {
 }
 
 .page-header {
-    font-family:'Open Sans Condensed';
     font-weight:300;
     letter-spacing:1px;
+    font-family:'Open Sans Condensed';
 }
 
 .nav-list>.active>a, .nav-list>.active>a:hover, .nav-list>.active>a:focus {
@@ -202,6 +202,8 @@ li.active a {
 
 .contact-help-notice {
     display:block;
-    background:#ffeedd;
-    border: 1px solid #000;
+}
+
+.contact-help-notice span {
+    color: #f60;
 }
