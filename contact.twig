@@ -3,26 +3,22 @@
 {% setcontent offices = 'locations' %}
 <div class="span9">
     <div class="contact-help-notice">
-        <p>Need Help?</p>
-        <p class="toll-free">888-420-9990</p>
-        <p>24 Hours</p></div>
+        <h3>Need Help? <span class="toll-free">1-888-420-9990</span> 24 Hours</h3>
+    </div>
 </div>
 {% for office in offices %}
     <div class="row">
         <div class="office">
             <div class="span9"><h4 class="vig">{{office.english_name}}</small></h4></div>
-            <div class="span3">
-                <div class="map">{{office.map_location}}</div>
+            <div class="span5">
+                <address>
+                    <p class="street">{{office.address}}<br />
+                    <p class="mailing">{{office.address2}}<br />
+                    <p class="city">{{office.city}}<br />
+                    <p class="postal">{{office.postal_code}}<br />
+                </address>
             </div>
-            <div class="span3">
-                <div class="address">
-                    <p class="street">{{office.address}}</p>
-                    <p class="mailing">{{office.address2}}</p>
-                    <p class="city">{{office.city}}</p>
-                    <p class="postal">{{office.postal_code}}</p>
-                </div>
-            </div>
-            <div class="span3">
+            <div class="span4">
                 <div class="contacts">
                     <p class="phone">{{office.phone_number}}</p>
                     <p class="fax">{{office.fax_number}}</p>
