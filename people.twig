@@ -2,9 +2,11 @@
 {% block contenttitle %}Our People{% endblock %}
 {% block main %}
 {{record.body}}
-{% setcontent peoples = 'people' where {is_committee: 'No'} orderby 'id' %}
+{% setcontent directors = 'people' where {is_director: 'Yes'} orderby 'id' %}
 {% setcontent committee = 'people' where {is_committee: 'Yes'} orderby 'id' %}
+{% setcontent staff = 'people' where {is_director: 'No' && is_committee: 'No'} orderby 'id' %}
 
+<h4>Our Directors</h4>
 <div class="people">
 {% for person in peoples %}
 <div class="media">
@@ -16,7 +18,7 @@
 </div>
 {% endfor %}
 </div>
-<div>&nbsp;</div>
+<h4>Our Executive Committee</h4>
 <div class="people">
 {% for person in committee %}
 <div class="media">
