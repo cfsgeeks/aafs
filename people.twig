@@ -2,14 +2,17 @@
 {% block contenttitle %}Our People{% endblock %}
 {% block main %}
 {{record.body}}
-{% setcontent peoples = 'people' orderby 'id' %}
+{% setcontent peoples = 'people' where {is_committee: 'No'} orderby 'id' %}
+{% s}
 {% for person in peoples %}
+<div class="people">
 <div class="media">
     <img src="http://placehold.it/96x96" alt="Picture of {{person.name}}" class="media-object pull-left">
     <div class="media-body">
         <h4 class="media-heading">{{person.name}} &mdash; <small>{{person.title}}</small></h4>
         {{person.bio}}
     </div>
+</div>
 </div>
 {% endfor %}
 {% endblock %}
