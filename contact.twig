@@ -20,9 +20,8 @@
             </div>
             <div class="span4">
                 <div class="contacts">
-                    <p class="phone">{{office.phone_number}}</p>
-                    <p class="fax">{{office.fax_number}}</p>
-                    <p class="email">{{office.email}}</p>
+                    <p class="phone">Phone: {{office.phone_number}}</p>
+                    {% if office.fax_number %}<p class="fax">Fax: {{office.fax_number}}</p>{% endif %}
                 </div>
                 <div class="hours">
                     <p>{{office.hours}}</p>
