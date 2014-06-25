@@ -218,3 +218,7 @@ li.active a {
 -ms-column-break-inside:avoid;
 column-break-inside:avoid;
 }
+
+.people li {
+    display: inline;
+}
