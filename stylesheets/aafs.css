@@ -207,3 +207,8 @@ li.active a {
 .contact-help-notice span {
     color: #f60;
 }
+
+.table-borderless td,
+.table-borderless th {
+    border: 0;
+}
