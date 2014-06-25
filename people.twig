@@ -20,16 +20,13 @@
 </ul>
 
 <legend>Our Senior Directors</legend>
-<ul class="people unstyled">
+<table>
 {% for person in directors %}
-<li>
-    <div class="media-body">
-        <h5 class="media-heading">{{person.name}} {% if person.title is not empty %} &mdash; <small>{{person.title}}</small>{% endif %}</h5>
-        {{person.bio}}
-    </div>
-</li>
+<tr>
+    <td>{{person.name}}</td><td>{{person.title}}</td><td>{{person.bio}}</td>
+</tr>
 {% endfor %}
-</ul>
+</table>
 
 <legend>Our Management Team</legend>
 <ul class="people unstyled">
