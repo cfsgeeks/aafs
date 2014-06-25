@@ -11,7 +11,7 @@
 {% for person in committee %}
 <div class="media">
     <div class="media-body">
-        <h5 class="media-heading">{{person.name}} {% if person.title %} &mdash; <small>{{person.title}}</small>{% endif %}</h5>
+        <h5 class="media-heading">{{person.name}} {% if person.title is not empty %} &mdash; <small>{{person.title}}</small>{% endif %}</h5>
         <h6>{{person.represents}}</h6>
         {{person.bio}}
     </div>
@@ -24,7 +24,7 @@
 {% for person in directors %}
 <div class="media">
     <div class="media-body">
-        <h5 class="media-heading">{{person.name}} &mdash; <small>{{person.title}}</small></h5>
+        <h5 class="media-heading">{{person.name}} {% if person.title is not empty %} &mdash; <small>{{person.title}}</small>{% endif %}</h5>
         {{person.bio}}
     </div>
 </div>
@@ -36,7 +36,7 @@
 {% for person in staff %}
 <div class="media">
     <div class="media-body">
-        <h5 class="media-heading">{{person.name}} &mdash; <small>{{person.title}}</small></h5>
+        <h5 class="media-heading">{{person.name}} {% if person.title is not empty %} &mdash; <small>{{person.title}}</small>{% endif %}</h5>
         {{person.bio}}
     </div>
 </div>
