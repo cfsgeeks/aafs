@@ -1,0 +1,12 @@
+{% extends "_base.twig" %}
+{% block main %}
+{% for record in records %}
+    <h3><a href="{{record.link()}}">{{record.title}}</a></h3>
+    <h4>{{record.datepublished|date('F j, Y')}} {% for cat in record.taxonomy.categories %}<span class="label">{{cat}}</span> {% endfor %}</h4>
+    {% if record.teaser %}
+        {{record.teaser}}
+    {% elseif record.introduction %}
+        {{record.introduction}}
+    {% endif %}
+{% endfor %}
+{% endblock %}
