@@ -12,6 +12,7 @@
 <li>
     <div class="media-body">
         <h5 class="media-heading">{{person.name}} {% if person.title is not empty %} &mdash; <small>{{person.title}}</small>{% endif %}</h5>
+        <h6>{{person.represents}}</h6>
         {{person.bio}}
     </div>
 </li>
