@@ -3,7 +3,7 @@
 {% setcontent offices = 'locations' %}
 <div class="span9">
     <div class="contact-help-notice text-center">
-        <h3>Need Help? <span class="toll-free">1-888-420-9990</span> 24 Hours</h3>
+        <h3>Need Help? <span class="toll-free">1-866-420-9990</span> 24 Hours</h3>
     </div>
 </div>
 {% for office in offices %}
@@ -13,7 +13,7 @@
             <div class="span5">
                 <address>
                     <p class="street">{{office.address}}<br />
-                    {% if office.mailing %}<p class="mailing">{{office.address2}}<br />{% endif %}
+                    {% if office.mailing %}<p class="mailing">{{office.mailing}}<br />{% endif %}
                     <p class="city">{{office.city}}<br />
                     <p class="postal">{{office.postal_code}}<br />
                 </address>
