@@ -6,19 +6,7 @@
 {% setcontent committee = 'people' where {is_committee: 'Yes'} orderby 'id' %}
 {% setcontent staff = 'people' where {is_director: 'No', is_committee: 'No'} orderby 'id' %}
 
-<h4>Our Directors</h4>
-<div class="people">
-{% for person in directors %}
-<div class="media">
-    <img src="http://placehold.it/96x96" alt="Picture of {{person.name}}" class="media-object pull-left">
-    <div class="media-body">
-        <h5 class="media-heading">{{person.name}} &mdash; <small>{{person.title}}</small></h5>
-        {{person.bio}}
-    </div>
-</div>
-{% endfor %}
-</div>
-<h4>Our Executive Committee</h4>
+<h4>Our Board of Directors &mdash; Executive Committee</h4>
 <div class="people">
 {% for person in committee %}
 <div class="media">
@@ -32,7 +20,20 @@
 {% endfor %}
 </div>
 
-<h4>Our Executive Staff</h4>
+<h4>Our Senior Directors</h4>
+<div class="people">
+{% for person in directors %}
+<div class="media">
+    <img src="http://placehold.it/96x96" alt="Picture of {{person.name}}" class="media-object pull-left">
+    <div class="media-body">
+        <h5 class="media-heading">{{person.name}} &mdash; <small>{{person.title}}</small></h5>
+        {{person.bio}}
+    </div>
+</div>
+{% endfor %}
+</div>
+
+<h4>Our Management Team</h4>
 <div class="people">
 {% for person in staff %}
 <div class="media">
