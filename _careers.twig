@@ -1,5 +1,5 @@
 {% setcontent careeritems = '/careers/latest/5' %}
-{% if careeritems is not empty %}
+{% if careeritems|length > 0 %}
 <ul class="unstyled">
     {% for item in careeritems %}
     <li>
