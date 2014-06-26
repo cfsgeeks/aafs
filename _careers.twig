@@ -1,4 +1,5 @@
 {% setcontent careeritems = '/careers/latest/5' %}
+{% if careeritems is not empty %}
 <ul class="unstyled">
     {% for item in careeritems %}
     <li>
@@ -8,3 +9,6 @@
     </li>
     {% endfor %}
 </ul>
+{% else %}
+<p>None right now. Please check back often.</p>
+{% endif %}
