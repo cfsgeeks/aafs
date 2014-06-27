@@ -216,3 +216,7 @@ li.active a {
 footer address {
     font-size:0.8em;
 }
+
+.office address p {
+    margin: 0 0 1px;
+}
