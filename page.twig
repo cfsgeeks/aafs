@@ -1,6 +1,6 @@
 {% extends "_base.twig" %}
 {% block main %}
-{% if record.image %}
+{% if record.image and record.image != "" %}
 <img src="{{record.image|image}}" />
 {% endif %}
 {{record.body}}
