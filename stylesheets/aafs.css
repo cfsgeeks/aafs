@@ -212,3 +212,7 @@ li.active a {
 .table-borderless th {
     border: 0;
 }
+
+footer address {
+    font-size:0.8em;
+}
