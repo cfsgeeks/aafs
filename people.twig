@@ -1,6 +1,7 @@
 {% extends '_base.twig' %}
 {% block contenttitle %}Our People{% endblock %}
 {% block main %}
+{{record.image}}
 {{record.body}}
 {% setcontent directors = 'people' where {is_director: 'Yes'} orderby 'id' %}
 {% setcontent committee = 'people' where {is_committee: 'Yes'} orderby 'id' %}
