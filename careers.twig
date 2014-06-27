@@ -2,6 +2,7 @@
 {% extends "_base.twig" %}
 {% block main %}
 {{record.body}}
+{% if jobs|length > 0}
 <h3>Current Opportunities</h3>
 <table class="table">
     <thead>
@@ -23,4 +24,7 @@
         {% endfor %}
     </tbody>
 </table>
+{% else %}
+<h3>No opportunities are currently available. Please check back often.</h3>
+{% endif %}
 {% endblock %}
