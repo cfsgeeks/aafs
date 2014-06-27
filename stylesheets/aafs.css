@@ -220,3 +220,7 @@ footer address {
 .office address p {
     margin: 0 0 1px;
 }
+
+.img-spacing {
+    margin: 10px;
+}
