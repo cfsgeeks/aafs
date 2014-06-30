@@ -224,3 +224,8 @@ footer address {
 .img-spacing {
     margin: 10px;
 }
+
+cite {
+    font-size:0.8em;
+    font-weight:bold;
+}
