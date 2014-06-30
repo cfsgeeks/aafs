@@ -26,12 +26,12 @@
 </table>
 
 <legend>Our Management Team</legend>
-<ul class="people unstyled">
+<table class="table table-condensed table-borderless">
 {% for person in staff %}
 <tr>
     <td>{{person.title}}</td><td>{{person.position}}</td><td>{{person.represents}}</td>
 </tr>
 {% endfor %}
-</ul>
+</table>
 
 {% endblock %}
