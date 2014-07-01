@@ -184,11 +184,11 @@ li.active a {
     border-right: 1px solid #f2f2f2;
 }
 
-#carousel-news li.active a {
+.carousel li.active a {
     color:#bf382c;
 }
 
-#carousel-news li>h4 {
+.carousel li>h4 {
     margin:0 0 10px;
 }
 
