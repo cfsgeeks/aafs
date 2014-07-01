@@ -233,3 +233,7 @@ cite {
 footer {
     border-top:1px solid #eee;
 }
+
+footer > .container {
+    margin-top:20px;
+}
