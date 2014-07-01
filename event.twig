@@ -27,7 +27,7 @@
         {% endif %}
         {% if event.registration == 'Yes' %}
         <p>Registration is required for this event.  The registration deadline is {{event.register_by|date('l F j, Y')}}</p>
+        {% endif %}
     </div>
 </div>
-{% endif %}
 {% endblock %}
