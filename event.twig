@@ -15,14 +15,14 @@
         <h6>Event Organizer</h6>
         <p>{{event.organizer}}</p>
         {% endif %}
-        {% if event.contact_name %}
+        {% if event.contact_name is not empty %}
         <h6>Event Contact</h6>
-        <p>{{event.contact_name}}</p>
+        <p>{{event.contact_name is not empty}}</p>
         {% endif %}
-        {% if event.contact_number %}
+        {% if event.contact_number is not empty %}
         <p>{{event.contact_number}}</p>
         {% endif %}
-        {% if event.contact_email %}
+        {% if event.contact_email is not empty %}
         <p>{{event.contact_email}}</p>
         {% endif %}
         {% if event.registration == 'Yes' %}
