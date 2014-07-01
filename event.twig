@@ -1,4 +1,9 @@
 {% extends "_base.twig" %}
 {% block main %}
-{{record.details}}
+<h4>Event Information</h4>
+<h5>When</h5>
+<p>{{event.event_start|date('l F j, Y')}}{% if event.event_end != '0000-00-00 00:00:00' and event.event_end != event.event_start %} &mdash; {{event.event_end|date('l F j, Y')}}{% endif %}</p>
+<h5>Where</h5>
+<p>{{event.location}}</p>
+<p>{{event.details}}</p>
 {% endblock %}
