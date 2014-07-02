@@ -13,7 +13,9 @@
         <p>{{event.details}}</p>
     </div>
     <div class="span4">
+        {% if event.organizer is not empty or event.contact_name is not empty or event.contact_number is not empty or event.contact_email is not empty %}
         <h5>Other Details</h5>
+        {% endif %}
         {% if event.organizer is not empty %}
         <h6>Event Organizer</h6>
         <p>{{event.organizer}}</p>
