@@ -3,7 +3,11 @@
 {% block main %}
 {% for record in records %}
     <h3><a href="{{record.link()}}">{{record.title}}</a></h3>
+    {% if record.is_recurring == 'No' %}
     <h4>{{record.event_start|date('l F j, Y')}}{% if record.event_end != '0000-00-00 00:00:00' and record.event_end != record.event_start %}&mdash;{{record.event_end|date('l F j, Y')}}{% endif %} <small>&mdash; {{record.location}}</small></h4>
+    {% else %}
+    {{record.recurring_date}}
+    {% endif %}
     {% if record.teaser %}
         {{record.teaser}}
     {% elseif record.introduction %}
