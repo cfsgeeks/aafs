@@ -6,7 +6,7 @@
     {% if record.is_recurring == 'No' %}
     <h4>{{record.event_start|date('l F j, Y')}}{% if record.event_end != '0000-00-00 00:00:00' and record.event_end != record.event_start %}&mdash;{{record.event_end|date('l F j, Y')}}{% endif %} <small>&mdash; {{record.location}}</small></h4>
     {% else %}
-    {{record.recurring_date}}
+    <h4>{{record.recurring_date}} <small>&mdash; {{record.location}}</h4>
     {% endif %}
     {% if record.teaser %}
         {{record.teaser}}
