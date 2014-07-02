@@ -4,7 +4,11 @@
     {% for event in current_events %}
         <li class="item{% if loop.first %} active {% endif %}">
             <h4><a href="{{event.link()}}">{{event.title}}</a></h4>
+            {% if event.is_recurring == 'No' %}
             <p>{{event.event_start|date('l F j, Y')}}{% if event.event_end != '0000-00-00 00:00:00' and event.event_end != event.event_start %}&mdash;{{event.event_end|date('l F j, Y')}}{% endif %}</p>
+            {% else %}
+            {{event.recurring_date}}
+            {% endif %}
             <p>{{event.location}}</p>
                 <p>{{event.details}}</p></li>
     {% endfor %}
