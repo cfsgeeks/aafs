@@ -4,6 +4,9 @@
     <div class="span5">
         <h5>Event Date</h5>
         <p>{{event.event_start|date('l F j, Y')}}{% if event.event_end != '0000-00-00 00:00:00' and event.event_end != event.event_start %} &mdash; {{event.event_end|date('l F j, Y')}}{% endif %}</p>
+        {% if event.is_recurring == 'Yes' %}
+        <p>{{event.recurring_date}}</p>
+        {% endif %}
         <h5>Location</h5>
         <p>{{event.location}}</p>
         <h5>Details</h5>
@@ -11,7 +14,7 @@
     </div>
     <div class="span4">
         <h5>Other Details</h5>
-        {% if event.organizer %}
+        {% if event.organizer is not empty %}
         <h6>Event Organizer</h6>
         <p>{{event.organizer}}</p>
         {% endif %}
